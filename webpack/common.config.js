@@ -41,6 +41,11 @@ config_common = {
         include: /(heart|cmblockly)/
       },
       {
+        test: /\.(glsl|frag|vert)$/,
+        use: ['raw-loader', 'glslify-loader'],
+        exclude: /node_modules/
+      },
+      {
         test: /\.(ts|tsx)?$/,
         use: [
           'babel-loader',
