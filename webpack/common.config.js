@@ -19,7 +19,9 @@ config_common = {
   },
   output: {
     path: DIST_PATH,
-    publicPath: '/',
+    publicPath: 'http://localhost:8880/',
+    filename: '[name].js',
+    chunkFilename: '[name].[chunkhash].js',
   },
   resolve: {
     extensions: ['.webpack.js', '.ts', '.tsx', '.js'],

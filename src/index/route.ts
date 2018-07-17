@@ -12,6 +12,15 @@ let _loadable = (load_func:any) => {
 
 export let routes:RouteProps[] = [
   {
+    path: '/gl',
+    exact: true,
+    component: _loadable(import('./routes/gl')),
+  },
+  {
+    path: '/gl/transition',
+    component: _loadable(import('./routes/gl/transition')),
+  },
+  {
     path: '/ide',
     component: _loadable(import('./routes/ide')),
   },
