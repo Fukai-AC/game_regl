@@ -58,13 +58,12 @@ const config_prod = {
             options: {
               sourceMap: false,
             }
-          },
-          'style-loader',
+          }
         ],
       },
       {
         test: /\.css$/,
-          use: ['css-loader', 'style-loader'],
+          use: ['style-loader', 'css-loader',],
       },
       {
         test: /\.png$/,
